@@ -7,6 +7,7 @@
 \usepackage{url}
 \usepackage{graphicx}
 \usepackage{amsthm}
+\usepackage{booktabs}
 
 % Definicija okolij izrek, posledica
 {\theoremstyle{plain}
@@ -87,9 +88,20 @@ Primer magičnega kvadrata reda 3 je prikazan v tabeli ?!?.
 % - napis nad tabelo: Magični kvadrat reda 3
 % - oznaka: table:mag3
 % Začetek magičnega kvadrata
-%   8 & 1 & 6 \\\hline
-%   3 & 5 & 7 \\\hline
-%   4 & 9 & 2 \\\hline
+%  
+
+\begin{table}
+   \centering
+   \large
+   \caption{Magični kvadrat reda 3} 
+   \label{table:mag3}
+   \begin{tabular}{|c|c|c|}
+      \hline
+      8 & 1 & 6 \\\hline
+      3 & 5 & 7 \\\hline
+      4 & 9 & 2 \\\hline
+   \end{tabular}
+\end{table}
 % Konec magičnega kvadrata
 
 \begin{definicija}
@@ -289,9 +301,19 @@ iz kvadrata Lo Shu z zrcaljenjem preko sredinske vodoravne črte.
 % - napis nad tabelo: Število različnih normalnih magičnih kvadratov
 % - oznaka: table:stevila
 % Začetek tabele
-      točna vrednost približek
-      red 1 2 3 4 5 6
-      število kvadratov 1 0 1 880 275305224 !!
+   \begin{table}[htb]
+      \centering  
+      \begin{tabular}{lcccccc}
+         \toprule
+         \multicolumn{5}{c}{točna vrednost} & približek\\
+         \midrule
+         red & 1 & 2 & 3 & 4 & 5 & 6\\
+         število kvadratov & 1 & 0 & 1 & 880 & 275305224 & !!\\
+         \bottomrule
+      \end{tabular}
+      \caption{Število različnih normalnih magičnih kvadratov}
+      \label{table:stevila}
+   \end{table}
 % Konec tabele
 
 Vse normalne magične kvadrate reda 4 je oštevilčil Frénicle de Bessy
