@@ -119,5 +119,80 @@
 \end{frame}
 
 
+% različni bloki
+\begin{frame}{Poudarjeni bloki}
+
+  \begin{exampleblock}{Primer}
+    Verjetno ste že opazili, da za naslovno prosojnico niste uporabili
+    ukaza \texttt{maketitle}, ampak ukaz \texttt{titlepage}.
+  \end{exampleblock}
+
+  \begin{block}{Opomba}
+		Okolja za poudarjene bloke so \texttt{block}, \texttt{exampleblock} in \texttt{alertblock}.
+	\end{block}
+	
+	\begin{alertblock}{Pozor!}
+		Začetek poudarjenega bloka (ukaz \texttt{begin}) vedno sprejme 
+	  dva parametra: okolje in naslov bloka.
+	  Drugi parameter (za naslov) je lahko prazen.
+	\end{alertblock}
+	
+\end{frame}
+
+
+% postopno odkrivanje
+\begin{frame}
+  \frametitle{Kako se dela pavze}
+  Če želimo vsebino postopoma odkrivati
+  lahko vstavimo ukaz pause\\
+  \pause
+  postopno odkrivanje: pause, onslide, only ter določila <…> na ukazih, vključno z <+-> na seznamih
+\end{frame}
+
+\begin{frame}
+  \frametitle{Onslide}
+  \onslide<1->{First Line of Text}
+  
+  \onslide<2->{Second Line of Text}
+  
+  \onslide<3->{Third Line of Text}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Only}
+  \only<1>{First Line of Text}
+  
+  \only<2>{Second Line of Text}
+  
+  \only<3>{Third Line of Text}
+\end{frame}
+
+\begin{frame}{Pavze z znaki<>}
+  \text{navaden text}\\
+  \texttt<2>{Example text}\\
+  \textcolor<3>{orange}{Orange text}
+\end{frame}
+
+
+% več stolpcev v okolju columns in vsak stolpec v okolju column
+\begin{frame}
+  \frametitle{explanation}
+  \begin{columns}
+  \begin{column}{0.5\textwidth}
+     some text here some text here some text here some text here some text here
+  \end{column}
+  \begin{column}{0.5\textwidth}  %%<--- here
+      \begin{center}
+       \includegraphics[width=0.8\textwidth]{kuza.jpg}
+       \end{center}
+  \end{column}
+  \end{columns}
+\end{frame}
+
+
+
+% poveži dva dokumenta
+%\section{Stolpci in slike}
+%\input{prosojnice/4-stolpci-slike.tex}
 
 \end{document}
